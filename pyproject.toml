@@ -9,6 +9,9 @@ readme = "README.md"
 python = "^3.12"
 
 
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.13.2"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
@@ -19,3 +22,12 @@ packages = [
 
 [tool.poetry.scripts]
 project = "labyrinth_game.main:main"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+exclude = ["venv", ".venv", "__pycache__", "dist"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = []
