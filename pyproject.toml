@@ -1,27 +1,25 @@
 [tool.poetry]
 name = "labyrinth_game"
 version = "0.1.0"
-description = ""
+description = "Текстовая приключенческая игра. Исследуйте лабиринт, решайте загадки и найдите сокровища!"
 authors = ["Igor Samsonov <prinstonsam@gmail.com>"]
 readme = "README.md"
+packages = [
+    { include = "labyrinth_game" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.12"
 
-
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.13.2"
+
+[tool.poetry.scripts]
+project = "labyrinth_game.main:main"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-packages = [
-    { include = "labyrinth_game"}
-]
-
-[tool.poetry.scripts]
-project = "labyrinth_game.main:main"
 
 [tool.ruff]
 line-length = 88

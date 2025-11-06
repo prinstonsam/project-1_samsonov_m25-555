@@ -1,5 +1,8 @@
-.venv
-.idea
+__pycache__/
+.venv/
+.idea/
+.vscode/
 poetry.lock
 dist/
-__pycache__
+.ruff_cache/
+*.cast
